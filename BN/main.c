@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 
-int const Taille = 7;
+int const Taille =    8    -1;
 #define DTLC 201 // ╔, Double Top Left Corner
 #define DTRC 187 // ╗, Double Top Right Corner
 #define DBLC 200 // ╚, Double Bottom Left Corner
@@ -16,17 +16,22 @@ int const Taille = 7;
 #pragma execution_character_set("utf-8")
 
 void GrilleTop() {
-    printf("%c%c%c", DHSB, DHSB, DHTB);
+    printf("%c%c%c%c", DHSB,DHSB, DHSB, DHTB);
 }
 
 void Grille2() {
-printf("%c",186);
+    printf("%c", 186);
 }
-void GrilleMid(){
 
-    printf("%c%c%c",205,205,206);
+void GrilleMid() {
+    printf("%c%c%c%c",205, 205, 205, DC);
 }
+void GrilleDown(){
+    printf("%c%c%c%c", DHSB,DHSB, DHSB, DHBB);
+}
+
 int main() {
+    int Test=49;
     SetConsoleOutputCP(65001);
     int reponce;
     printf("Bonjour Welcome to Bataille naval\n Donner un chiffre pour choisir une action \n1.\tJeux\n2.\tAide\n");
@@ -42,31 +47,43 @@ int main() {
     else {
         printf("\n\nUne grille basée sur les lignes doubles:\n");
         SetConsoleOutputCP(437); // For semi-graphic characters
-        printf("A B C D E F G H\n"
+        printf("  A   B   C   D   E   F   G   H\n"
                "");
 
         printf("%c", DTLC);
         for (int i = 0; i < Taille; ++i) {
-
             GrilleTop();
-
         }
-        printf("%c%c%c\n", DHSB, 205, DTRC);
-        for (int k = 0; k < 4; ++k) {
+        printf("%c%c%c%c\n", 205,DHSB, 205, DTRC);
 
 
-            for (int j = 0; j < Taille + 2; ++j) {
+        for (int l = 0; l <Taille ; ++l) {
+
+
+            for (int j = 0; j < Taille + 1; ++j) {
                 Grille2();
-                printf("  ");
+                printf(" %c ",Test);
+                Test++;
             }
-
-
-            printf("\n%c", 204);
+            printf("%c",186);
+            printf("\n");
+            printf("%c", 204);
             for (int k = 0; k < Taille; ++k) {
                 GrilleMid();
             }
-            printf("%c%c%c", 205, 205, 185);
+            printf("%c%c%c%c\n", 205,205, 205, 185);
         }
+        for (int j = 0; j < Taille + 1; ++j) {
+            Grille2();
+            printf(" %c ",Test);
+            Test++;
+        }
+        printf("%c",186);
+        printf("\n%c", 200);
+        for (int i = 0; i < Taille; ++i) {
+            GrilleDown();
+        }
+        printf("%c%c%c%c",205,205,205,188);
     }
 
 
@@ -78,3 +95,14 @@ int main() {
 
     return 0;
 }
+/*
+ * for (int k = 0; k < Taille; ++k) {
+GrilleMid();
+}
+    printf("%c%c%c", 205, 205, 185);
+ *
+ *   printf("\n%c", 204);
+
+ *
+ *
+ */
