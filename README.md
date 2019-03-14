@@ -1,19 +1,25 @@
-# DESCRIPTIF DU PROJET
+# Bataille navale
 
-Le type d’application C demandé doit offrir les fonctionnalités minimales suivantes :
-## Version 0.1:
-- Jouer à la bataille navale alors que la position des bateaux est codée dans le programme
+## Description
+Un jeux codé en C qui permettra de jouer a une Bataille Navale
 
-- Afficher l’aide du jeu
-## Version 1.0 (pour le 20 avril 2018)
-- S’authentifier en tant que joueur
+## Génération
+Vous aurez besoin de:
 
-- Logger les faits importants durant toute la durée de fonctionnement de l’application
+- Du lociciel CLion
+- Un OS Windows 10
 
-- Le programme choisit une grille au hasard dans un répertoire et la charge 
+Pour générer l'exécutable, vous devez:
 
-- Afficher la liste des scores atteints lors des parties précédentes
-## Notes : 
-- Des fichiers seront utilisés pour la persistance des données.
-- Un menu de type console sera utilisé pour accéder aux différentes fonctionnalités.
-- Une extension pourra être envisagée pour ceux qui auraient terminé toutes les fonctionnalités avant la fin du temps imparti. Elle sera à discuter entre l’élève et le mandant du projet.
+1. ouvir de repertoir BN avec Clion
+1. Compilé le programme
+1. l' executable ce trouvera dans le dossier cmake-build-debug
+1. Lancer Cette executable
+
+## Exécution
+Pour exécuter le programme, vous devez:
+
+1. Ouvir de repertoir BN avec Clion
+1. Compilé le programme
+1. L' executable ce trouvera dans le dossier cmake-build-debug
+1. Lancer Cette executable
