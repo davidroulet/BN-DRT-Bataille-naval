@@ -16,4 +16,6 @@ Pour les test je partagerais l'éxecutable avec mes camarades
 afin de relever les bug qui auraient outrepassez ma viligence
 
 5.
-Les tests seront 
+Les niveau de test sont uniquement Unitaire et suivront les use case
+pas de test intergration
+pas de test system 

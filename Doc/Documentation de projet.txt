@@ -1,0 +1,16 @@
+
+
+Liste des Objectif
+
+Version 0.1
+- Jouer une partie de battaille alors que la position des bateau est fixe
+- Affiché l aide du jeu
+Verson 1.0
+- Pouvoir s'authentifier
+- Enrigrster les faits important durent la partie
+- Le jeux choisis une grille aleatoirment parmis une liste de grille defini
+- Affiché les resulats des partie précedente
+Remarque
+- Les fichiers sont utilisé pour Enrigrster les données
+- l'interface sera en Format Console
+- des foncionnalité sont envissagable
