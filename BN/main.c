@@ -32,6 +32,7 @@ void GrilleDown(){
 
 int main() {
     int Test=49;
+    int Num=49;
     SetConsoleOutputCP(65001);
     int reponce;
     printf("Bonjour Welcome to Bataille naval\n Donner un chiffre pour choisir une action \n1.\tJeux\n2.\tAide\n");
@@ -45,13 +46,15 @@ int main() {
     if (reponce == 2)
         printf("Comment Jouer ?\n Alors le princpe et simple il ce joue sur un plateau il vas avoir des bateau addvers que vous aller devoir touché pour cela vous allez devoir choisir une case ou tiré si il y as un bateau a cette endroit cela affichera touché et si il y as de l eau cela affichera a l'eau l objetif est de touché tout les bateaus une fois que vous avez touché tout les bateaus vous avez ganger la partie \n");
     else {
-        printf("\n\nUne grille basée sur les lignes doubles:\n");
+
         SetConsoleOutputCP(437); // For semi-graphic characters
+        
         printf("  A   B   C   D   E   F   G   H\n"
                "");
-
+        printf(" ");
         printf("%c", DTLC);
         for (int i = 0; i < Taille; ++i) {
+
             GrilleTop();
         }
         printf("%c%c%c%c\n", 205,DHSB, 205, DTRC);
@@ -59,27 +62,37 @@ int main() {
 
         for (int l = 0; l <Taille ; ++l) {
 
-
+            printf("%c",Num);
+            Num++;
             for (int j = 0; j < Taille + 1; ++j) {
+
                 Grille2();
                 printf(" %c ",Test);
                 Test++;
             }
             printf("%c",186);
             printf("\n");
+            printf(" ");
             printf("%c", 204);
+
             for (int k = 0; k < Taille; ++k) {
                 GrilleMid();
             }
+
             printf("%c%c%c%c\n", 205,205, 205, 185);
+
         }
+        printf("%c",Num);
+        Num++;
         for (int j = 0; j < Taille + 1; ++j) {
             Grille2();
             printf(" %c ",Test);
             Test++;
         }
+
         printf("%c",186);
-        printf("\n%c", 200);
+        printf("\n %c", 200);
+
         for (int i = 0; i < Taille; ++i) {
             GrilleDown();
         }
