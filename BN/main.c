@@ -28,27 +28,27 @@ void Grille() {
  //           {0, 0, 0, 0, 0, 0, 0, 0},
 //
  //   };
-    int Donnee[8][8] = {
+    int Donnee[8][8] = {  // Donneée pour la grille
+            {0, 0, 0, 0, 0, 88, 0, 0},
+            {0, 0, 0, 0, 0, 88, 111, 0},
+            {254, 254, 254, 0, 0, 88, 0, 0},
+            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 111, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0},
             {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
+            {0, 0, 0, 111, 0, 0, 0, 0},
 
     };
     SetConsoleOutputCP(437); // For semi-graphic characters
-    int Lingne = 0;
-    int Colonne = 0;
+    int Lingne = 0; // Ligne pour l'affichage
+    int Colonne = 0; // Colone pour l'affichage
     int Num = 1;
-    printf("  A   B   C   D   E   F   G   H\n");
+    printf("  A   B   C   D   E   F   G   H\n"); // Ligne de caratcre pour definir les collones
     printf(" ");
     printf("%c", DTLC);
     for (int i = 0; i < Taille; ++i) {
 
-        printf("%c%c%c%c", DHSB, DHSB, DHSB, DHTB);
+        printf("%c%c%c%c", DHSB, DHSB, DHSB, DHTB); //
     }
     printf("%c%c%c%c\n", 205, DHSB, 205, DTRC);
 
@@ -117,10 +117,11 @@ int main() {
         SetConsoleOutputCP(437); // For semi-graphic characters
         Grille();
     }
-    printf("\n");
-    printf("Dans qulle Ligne Voulez Vous Tiré");
-    int Choix=0;
-    scanf("%d",&Choix);
+
+//    printf("\n");
+//    printf("Dans qulle Ligne Voulez Vous Tiré");
+//    int Choix=0;
+//    scanf("%d",&Choix);
 
 
     system("pause");
@@ -130,3 +131,6 @@ int main() {
 
     return 0;
 }
+// Bataille naval
+// David Roulet
+// 25.03.2019
