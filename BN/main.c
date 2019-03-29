@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <windows.h>
+#include <conio.h>
 
 int const Taille = 8 - 1;
 #define DTLC 201 // ╔, Double Top Left Corner
@@ -99,24 +100,35 @@ void Grille() {
     }
     printf("%c%c%c%c", 205, 205, 205, 188);
 }
-
+void menu(){
+    int reponce;
+    int rep2;
+    printf("\nun chiffre pour choisir une action \n1.\tJeux\n2.\tAide\n");
+    reponce=_getch();
+    while (reponce != 50 && reponce != 49) {
+        printf("Un nombre entre 1 et 2 Stp\n");
+        reponce=_getch();
+    }
+    if (reponce == 50) {
+        printf("Comment Jouer ?\n Alors le principe est simple il se joue sur un plateau il va y avoir des bateaux adverses que vous allez devoir toucher. Pour cela vous allez devoir choisir une case où tirer, si il y à un bateau à cet endroit cela affichera touché et si il y a de l'eau cela affichera à l'eau l'objetif est de touché tout les bateaux. Une fois que vous avez coulé tout les bateaux, vous avez gagné la partie. \n");
+        printf("\n Appuie sur n'importe quelle touche pour revenir au menu\n ");
+        rep2=_getch();
+        if (rep2>0){
+            menu();
+        }
+    }
+    else {
+        SetConsoleOutputCP(437); // For semi-graphic characters
+        Grille();
+    }
+}
 int main() {
 
     SetConsoleOutputCP(65001);
     int reponce;
     printf("Bonjour Welcome to Bataille navale\n ");
-    printf("un chiffre pour choisir une action \n1.\tJeux\n2.\tAide\n");
-    scanf("%d", &reponce);
-    while (reponce != 2 && reponce != 1) {
-        printf("Un nombre entre 1 et 2 Stp");
-        scanf("%d", &reponce);
-    }
-    if (reponce == 2)
-        printf("Comment Jouer ?\n Alors le principe est simple il se joue sur un plateau il va y avoir des bateaux adverses que vous allez devoir toucher. Pour cela vous allez devoir choisir une case où tirer, si il y à un bateau à cet endroit cela affichera touché et si il y a de l'eau cela affichera à l'eau l'objetif est de touché tout les bateaux. Une fois que vous avez coulé tout les bateaux, vous avez gagné la partie. \n");
-    else {
-        SetConsoleOutputCP(437); // For semi-graphic characters
-        Grille();
-    }
+menu();
+
 
 //    printf("\n");
 //    printf("Dans qulle Ligne Voulez Vous Tiré");
