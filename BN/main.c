@@ -16,9 +16,57 @@ int const Taille = 8 - 1;
 #define DC   206 // ╬, Double Center
 #pragma execution_character_set("utf-8")
 
+void Tirer() {
+
+    int LigneC;
+    int Ligne2;
+    int ColloneC;
+    int Collone2;
+
+    do {
+        printf("Dans quele Colone Voulez tirer? (entre A et H)\n");
+        ColloneC = _getch();
+    } while (ColloneC < 96 || ColloneC > 105);
+
+    switch (ColloneC) {
+        case 97:
+            Collone2 = 0;
+            break;
+        case 98:
+            Collone2 = 1;
+            break;
+        case 99:
+            Collone2 = 2;
+            break;
+        case 100:
+            Collone2 = 3;
+            break;
+        case 101:
+            Collone2 = 4;
+            break;
+        case 102:
+            Collone2 = 5;
+            break;
+        case 103:
+            Collone2 = 6;
+            break;
+        case 104:
+            Collone2 = 7;
+            break;
+    }
+    do {
+        printf("donner la Ligne sur la quelle vous voulez tire(entre 1 et 8)\n");
+        LigneC = _getch();
+    } while (LigneC < 48 || LigneC > 58);
+    switch (LigneC) {
+
+    }
+
+}
+
 void Grille() {
     int Donnee[8][8] = {  // Donneée pour la grille
-            {0, 0, 0, 0, 0,  0,  0, 0},
+            {0, 0, 0, 0, 0,  1,  0, 0},
             {0, 0, 0, 0, -1, 0,  0, 0},
             {0, 0, 0, 0, 0,  0,  0, 0},
             {0, 0, 0, 0, 0,  -1, 0, 0},
@@ -127,7 +175,7 @@ int main() {
     system("pause");
     system("pause");
     system("cls");
-
+    Tirer();
 
     return 0;
 }
