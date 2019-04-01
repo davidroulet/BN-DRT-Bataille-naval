@@ -17,27 +17,15 @@ int const Taille = 8 - 1;
 #pragma execution_character_set("utf-8")
 
 void Grille() {
- //   int B1=3;
- //   int DonneeC[8][8] = {
- //           {B1, 0, 0, 0, 0, 0, 0, 0},
- //           {B1, 0, 0, 0, 0, 0, 0, 0},
- //           {B1, 0, 0, 0, 0, 0, 0, 0},
- //           {0, 0, 0, 0, 0, 0, 0, 0},
- //           {0, 0, 0, 0, 0, 0, 0, 0},
-//            {0, 0, 0, 0, 0, 0, 0, 0},
- //           {0, 0, 0, 0, 0, 0, 0, 0},
- //           {0, 0, 0, 0, 0, 0, 0, 0},
-//
- //   };
     int Donnee[8][8] = {  // Donneée pour la grille
-            {0, 0, 0, 0, 0, 88, 0, 0},
-            {0, 0, 0, 0, 0, 88, 111, 0},
-            {254, 254, 254, 0, 0, 88, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 111, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 0, 0, 0, 0, 0},
-            {0, 0, 0, 111, 0, 0, 0, 0},
+            {0, 0, 0, 0, 0,  0,  0, 0},
+            {0, 0, 0, 0, -1, 0,  0, 0},
+            {0, 0, 0, 0, 0,  0,  0, 0},
+            {0, 0, 0, 0, 0,  -1, 0, 0},
+            {0, 0, 0, 0, 0,  0,  0, 0},
+            {0, 0, 0, 0, 0,  3,  3, 13},
+            {0, 0, 0, 0, 0,  0,  0, 0},
+            {0, 0, 0, 0, 0,  0,  0, 0},
 
     };
     SetConsoleOutputCP(437); // For semi-graphic characters
@@ -61,7 +49,15 @@ void Grille() {
         for (int j = 0; j < Taille + 1; ++j) {
 
             printf("%c", 186);
-            printf(" %c ", Donnee[Colonne][Lingne]);
+            if (Donnee[Colonne][Lingne] == 0) {
+                printf("   ");
+            } else if (Donnee[Colonne][Lingne] > 10) {
+                printf(" X ");
+            } else if (Donnee[Colonne][Lingne] >= 1 && Donnee[Colonne][Lingne] < 10) {
+                printf("   ");
+            } else if (Donnee[Colonne][Lingne] == -1) {
+                printf(" O ");
+            }
             Lingne++;
             if (Lingne > 7) {
                 Lingne = 0;
@@ -100,42 +96,34 @@ void Grille() {
     }
     printf("%c%c%c%c", 205, 205, 205, 188);
 }
-void menu(){
+
+void menu() {
     int reponce;
     int rep2;
     printf("\nun chiffre pour choisir une action \n1.\tJeux\n2.\tAide\n");
-    reponce=_getch();
+    reponce = _getch();
     while (reponce != 50 && reponce != 49) {
         printf("Un nombre entre 1 et 2 Stp\n");
-        reponce=_getch();
+        reponce = _getch();
     }
     if (reponce == 50) {
         printf("Comment Jouer ?\n Alors le principe est simple il se joue sur un plateau il va y avoir des bateaux adverses que vous allez devoir toucher. Pour cela vous allez devoir choisir une case où tirer, si il y à un bateau à cet endroit cela affichera touché et si il y a de l'eau cela affichera à l'eau l'objetif est de touché tout les bateaux. Une fois que vous avez coulé tout les bateaux, vous avez gagné la partie. \n");
         printf("\n Appuie sur n'importe quelle touche pour revenir au menu\n ");
-        rep2=_getch();
-        if (rep2>0){
+        rep2 = _getch();
+        if (rep2 > 0) {
             menu();
         }
-    }
-    else {
+    } else {
         SetConsoleOutputCP(437); // For semi-graphic characters
         Grille();
     }
 }
+
 int main() {
 
     SetConsoleOutputCP(65001);
-    int reponce;
-    printf("Bonjour Welcome to Bataille navale\n ");
-menu();
-
-
-//    printf("\n");
-//    printf("Dans qulle Ligne Voulez Vous Tiré");
-//    int Choix=0;
-//    scanf("%d",&Choix);
-
-
+    printf("Bonjour Welcome to the Bataille navale\n ");
+    menu();
     system("pause");
     system("pause");
     system("cls");
