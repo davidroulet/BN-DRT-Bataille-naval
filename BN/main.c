@@ -23,9 +23,7 @@ int Donnee[8][8] = {  // Donneée pour la grille
         {0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0},
         {0, 0, 0, 0, 0, 0, 0, 0},
-        {0, 0, 0, 0, 0, 0, 0, 0},
-
-};
+        {0, 0, 0, 0, 0, 0, 0, 0},};
 int LigneC;
 int Ligne2;
 int ColloneC;
@@ -35,7 +33,6 @@ int B2 = 0;
 int B3 = 0;
 
 void Grille() {
-
     SetConsoleOutputCP(437); // For semi-graphic characters
     int Lingne = 0; // Ligne pour l'affichage
     int Colonne = 0; // Colone pour l'affichage
@@ -44,25 +41,18 @@ void Grille() {
     printf(" ");
     printf("%c", DTLC);
     for (int i = 0; i < Taille; ++i) {
-
         printf("%c%c%c%c", DHSB, DHSB, DHSB, DHTB); //
     }
     printf("%c%c%c%c\n", 205, DHSB, 205, DTRC);
-
-
     for (int l = 0; l < Taille; ++l) {
-
         printf("%d", Num);
         Num++;
         for (int j = 0; j < Taille + 1; ++j) {
-
             if (B1 == 2 && Donnee[Colonne][Lingne] == 12) {
                 Donnee[Colonne][Lingne] += 10;
-
             }
             if (B2 == 3 && Donnee[Colonne][Lingne] == 13) {
                 Donnee[Colonne][Lingne] += 10;
-
             }
             if (B3 == 4 && Donnee[Colonne][Lingne] == 14) {
                 Donnee[Colonne][Lingne] += 10;
@@ -92,31 +82,23 @@ void Grille() {
         printf("\n");
         printf(" ");
         printf("%c", 204);
-
         for (int k = 0; k < Taille; ++k) {
             printf("%c%c%c%c", 205, 205, 205, DC);
         }
-
         printf("%c%c%c%c\n", 205, 205, 205, 185);
-
     }
     printf("%d", Num);
     for (int j = 0; j < Taille + 1; ++j) {
-        printf("%c", 186);
         if (B1 == 2 && Donnee[Colonne][Lingne] == 12) {
             Donnee[Colonne][Lingne] += 10;
-
         }
         if (B2 == 3 && Donnee[Colonne][Lingne] == 13) {
             Donnee[Colonne][Lingne] += 10;
-
         }
         if (B3 == 4 && Donnee[Colonne][Lingne] == 14) {
             Donnee[Colonne][Lingne] += 10;
-
         }
         printf("%c", 186);
-
         if (Donnee[Colonne][Lingne] == 0) {
             printf("   ");
         } else if (Donnee[Colonne][Lingne] == 1) {
@@ -135,15 +117,14 @@ void Grille() {
             Colonne++;
         }
     }
-
     printf("%c", 186);
     printf("\n %c", 200);
-
     for (int i = 0; i < Taille; ++i) {
         printf("%c%c%c%c", DHSB, DHSB, DHSB, DHBB);
     }
     printf("%c%c%c%c", 205, 205, 205, 188);
 }
+
 void menu() {
     int reponce;
     int rep2;
@@ -160,12 +141,12 @@ void menu() {
         if (rep2 > 0) {
             menu();
         }
-
     } else {
         SetConsoleOutputCP(437); // For semi-graphic characters
         Grille();
     }
 }
+
 void Tirer() {
     do {
         printf("\nDans quele Colone Voulez tirer? (entre A et H)\n");
@@ -228,8 +209,6 @@ void Tirer() {
             break;
     }
     system("cls");
-
-
     if (Donnee[Ligne2][Collone2] == 1 || Donnee[Ligne2][Collone2] > 10) {
         printf("Vous avez deja tirer sur cette case\n\n\n");
     } else if (Donnee[Ligne2][Collone2] == 0) {
@@ -248,7 +227,6 @@ void Tirer() {
         Donnee[Ligne2][Collone2] += 10;
         if (B2 == 3) {
             printf("Couler\n\n\n");
-
         }
     } else if (Donnee[Ligne2][Collone2] == 4) {
         printf("Touche ");
@@ -256,17 +234,12 @@ void Tirer() {
         Donnee[Ligne2][Collone2] += 10;
         if (B3 == 4) {
             printf("Couler\n\n\n");
-
         }
     }
-
     Grille();
-    
 }
 
-
 int main() {
-
     SetConsoleOutputCP(65001);
     printf("Bonjour Welcome to the Bataille navale\n ");
     menu();
