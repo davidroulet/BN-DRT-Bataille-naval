@@ -215,21 +215,21 @@ void Tirer() {
         printf("A l'eau\n\n\n");
         Donnee[Ligne2][Collone2]++;
     } else if (Donnee[Ligne2][Collone2] == 2) {
-        printf("Touche ");
+        printf("Touche \n\n\n");
         B1++;
         Donnee[Ligne2][Collone2] += 10;
         if (B1 == 2) {
             printf("Couler\n\n\n");
         }
     } else if (Donnee[Ligne2][Collone2] == 3) {
-        printf("Touche ");
+        printf("Touche \n\n\n");
         B2++;
         Donnee[Ligne2][Collone2] += 10;
         if (B2 == 3) {
             printf("Couler\n\n\n");
         }
     } else if (Donnee[Ligne2][Collone2] == 4) {
-        printf("Touche ");
+        printf("Touche \n\n\n");
         B3++;
         Donnee[Ligne2][Collone2] += 10;
         if (B3 == 4) {
