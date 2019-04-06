@@ -49,19 +49,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Program Files (x86)\CLion\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "P:\Clion\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Program Files (x86)\CLion\bin\cmake\win\bin\cmake.exe" -E remove -f
+RM = "P:\Clion\CLion 2018.3.4\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\David.ROULET\Documents\Github\Bataille-Naval\BN
+CMAKE_SOURCE_DIR = W:\Documents\GitHub\BN-DRT-Bataille-naval\BN
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\David.ROULET\Documents\Github\Bataille-Naval\BN\cmake-build-debug
+CMAKE_BINARY_DIR = W:\Documents\GitHub\BN-DRT-Bataille-naval\BN\cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/BN.dir
@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = C:\Users\David.ROULET\Documents\Github\Bataille-Naval\BN\cmak
 CMakeFiles/BN.dir/all:
 	$(MAKE) -f CMakeFiles\BN.dir\build.make CMakeFiles/BN.dir/depend
 	$(MAKE) -f CMakeFiles\BN.dir\build.make CMakeFiles/BN.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\David.ROULET\Documents\Github\Bataille-Naval\BN\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target BN"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=W:\Documents\GitHub\BN-DRT-Bataille-naval\BN\cmake-build-debug\CMakeFiles --progress-num=1,2 "Built target BN"
 .PHONY : CMakeFiles/BN.dir/all
 
 # Include target in all.
@@ -80,9 +80,9 @@ all: CMakeFiles/BN.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BN.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\David.ROULET\Documents\Github\Bataille-Naval\BN\cmake-build-debug\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start W:\Documents\GitHub\BN-DRT-Bataille-naval\BN\cmake-build-debug\CMakeFiles 2
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/BN.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\David.ROULET\Documents\Github\Bataille-Naval\BN\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start W:\Documents\GitHub\BN-DRT-Bataille-naval\BN\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/BN.dir/rule
 
 # Convenience name for target.
